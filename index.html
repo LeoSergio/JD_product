@@ -1,90 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>JD_Product</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JD_Product</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="header">
-        <h2>JD_Product</h2>
-        <ul><!--Lembre que tem como colocar um id no produto 
-            e acessar o conteudo na mesma page-->
-            <li><a href="#"></a>Eletronicos</li>
-            <li><a href="#"></a>Alianças</li>
-            <li><a href="#"></a>Impressão</li>
-            <li><a href="#"></a>Manutenção</li>
-            <li><a href="#"></a>Video Game</li>
-        </ul>
+
+  <div class="header">
+    <h2>JD_Product</h2>
+    <ul>
+      <li><a href="#eletronic">Eletrônicos</a></li>
+      <li><a href="#impressao">Impressão</a></li>
+      <li><a href="#manutencao">Manutenção</a></li>
+      <li><a href="#video-game">Video Game</a></li>
+      <li><a href="#">Alianças</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <!-- Exemplo de produto -->
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
     </div>
-    <div class="container">
-        <div class="eletronic">
-            <h2>Eletronicos</h2>
-            <div class="product">
-                <h3>Fones P9</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            
-        </div>
-        <div class="impressao">
-            <h2>Impressão</h2>
-            <div class="product">
-                <h3>Fones P9</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <h3>Fones P9</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <h3>Fones P9</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-            <div class="product">
-                <h3>Fones P9</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
 
-        </div>
-        <div class="manutencao">
-            <h2>Manutenção</h2>
-            <div class="product">
-                <h3>Formatação de Computador</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-
-        </div>
-        <div class="video-game">
-            <h2>Video Game</h2>
-            <div class="product">
-                <h3>Controle PS3</h3>
-                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    <br>Quae, eveniet incidunt odit ea debitis necessitatibus voluptatum nobis.</p>
-                <p><span>Valor:xx</span></p>
-                <button>Adicionar ao Carrinho</button>
-            </div>
-
-        </div>
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
     </div>
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="eletronic">
+      <h2 id="eletronic">Eletrônicos</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="eletronic">
+      <h2 id="eletronic">Alianças</h2>
+      <div class="product">
+        <h3>Fones P9</h3>
+        <img src="model-event.png" alt="" width="200px">
+        <p class="description">Lorem ipsum dolor sit amet.</p>
+        <p><span>Valor: 50</span></p>
+        <button onclick="adicionarCarrinho('Fones P9', 50)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+
+
+    <div class="button">
+      <button onclick="toggleCarrinho()">Ver Carrinho</button>
+    </div>
+  </div>
+
+  <!-- Carrinho lateral -->
+  <div id="carrinho-container" class="carrinho-lateral">
+    <h3>Carrinho de Compras</h3>
+    <div id="carrinho-itens"></div>
+    <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+    <button id="confirmar" onclick="confirmarCompra()">Confirmar Compra</button>
+  </div>
+
+  <div id="overlay"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
