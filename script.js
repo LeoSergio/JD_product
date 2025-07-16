@@ -48,3 +48,28 @@ document.getElementById('overlay').addEventListener('click', () => {
   toggleCarrinho();
 });
 
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('ativo');
+}
+function abrirMenu() {
+  document.getElementById('menu-box').classList.add('ativo');
+  document.getElementById('menu-overlay').classList.add('ativo');
+}
+
+function fecharMenu() {
+  document.getElementById('menu-box').classList.remove('ativo');
+  document.getElementById('menu-overlay').classList.remove('ativo');
+}
+
+
+
+function abrirMenu() {
+  document.getElementById('menu-box').classList.add('ativo');
+}
+
+function fecharMenu() {
+  document.getElementById('menu-box').classList.remove('ativo');
+}
+
+

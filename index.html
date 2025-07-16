@@ -8,16 +8,27 @@
 </head>
 <body>
 
-  <div class="header">
-    <h2>JD_Product</h2>
-    <ul>
-      <li><a href="#eletronic">Eletrônicos</a></li>
-      <li><a href="#impressao">Impressão</a></li>
-      <li><a href="#manutencao">Manutenção</a></li>
-      <li><a href="#video-game">Video Game</a></li>
-      <li><a href="#">Alianças</a></li>
-    </ul>
-  </div>
+    <header class="header">
+        <h2 class="logo">JD_Product</h2>
+        <button class="menu-toggle" onclick="abrirMenu()">☰</button>
+    </header>
+
+    <!-- Menu suspenso lateral (sem cobrir a tela inteira) -->
+    <div id="menu-box" class="menu-box">
+        <button class="menu-close" onclick="fecharMenu()">×</button>
+            <nav class="menu-links">
+                <a href="#eletronic" onclick="fecharMenu()">Eletrônicos</a>
+                <a href="#impressao" onclick="fecharMenu()">Impressão</a>
+                <a href="#manutencao" onclick="fecharMenu()">Manutenção</a>
+                <a href="#video-game" onclick="fecharMenu()">Video Game</a>
+            </nav>
+    </div>
+
+    <div id="menu-overlay" class="menu-overlay" onclick="fecharMenu()"></div>
+
+
+
+
 
   <div class="container">
     <!-- Exemplo de produto -->
@@ -87,7 +98,7 @@
     </div>
 
     <div class="eletronic">
-      <h2 id="eletronic">Alianças</h2>
+      <h2 id="alianca">Alianças</h2>
       <div class="product">
         <h3>Fones P9</h3>
         <img src="model-event.png" alt="" width="200px">
@@ -109,11 +120,13 @@
     <h3>Carrinho de Compras</h3>
     <div id="carrinho-itens"></div>
     <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
-    <button id="confirmar" onclick="confirmarCompra()">Confirmar Compra</button>
+    <button id="confirmar" onclick="enviarParaWhatsApp();">Confirmar Compra</button>
+
   </div>
 
   <div id="overlay"></div>
 
   <script src="script.js"></script>
+  <script src="whatsapp.js"></script>
 </body>
 </html>
