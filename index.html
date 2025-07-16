@@ -9,22 +9,26 @@
 <body>
 
     <header class="header">
-        <h2 class="logo">JD_Product</h2>
-        <button class="menu-toggle" onclick="abrirMenu()">☰</button>
-    </header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <h2 class="logo">JD_Product</h2>
+    <button class="carrinho-toggle" onclick="toggleCarrinho()">
+        🛒 <span id="carrinho-contador">0</span>
+    </button>
+</header>
 
     <!-- Menu suspenso lateral (sem cobrir a tela inteira) -->
     <div id="menu-box" class="menu-box">
-        <button class="menu-close" onclick="fecharMenu()">×</button>
+        <button class="menu-close" onclick="toggleMenu()">×</button>
             <nav class="menu-links">
-                <a href="#eletronic" onclick="fecharMenu()">Eletrônicos</a>
-                <a href="#impressao" onclick="fecharMenu()">Impressão</a>
-                <a href="#manutencao" onclick="fecharMenu()">Manutenção</a>
-                <a href="#video-game" onclick="fecharMenu()">Video Game</a>
+                <a href="#eletronic" onclick="toggleMenu()">Eletrônicos</a>
+                <a href="#impressao" onclick="toggleMenu()">Impressão</a>
+                <a href="#manutencao" onclick="toggleMenu()">Manutenção</a>
+                <a href="#video-game" onclick="toggleMenu()">Video Game</a>
+                <a href="#alianca" onclick="toggleMenu()">Alianças</a>
             </nav>
     </div>
 
-    <div id="menu-overlay" class="menu-overlay" onclick="fecharMenu()"></div>
+    <div id="menu-overlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
 
 
@@ -109,24 +113,20 @@
     </div>
 
 
-
-    <div class="button">
-      <button onclick="toggleCarrinho()">Ver Carrinho</button>
-    </div>
-  </div>
-
   <!-- Carrinho lateral -->
   <div id="carrinho-container" class="carrinho-lateral">
+    <button id="fechar-carrinho" class="fechar-carrinho">×</button>
     <h3>Carrinho de Compras</h3>
     <div id="carrinho-itens"></div>
     <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
-    <button id="confirmar" onclick="enviarParaWhatsApp();">Confirmar Compra</button>
+    <button onclick="confirmarCompra()">Confirmar Compra</button>
+</div>
 
-  </div>
+  <div id="notificacao" class="notificacao"></div>
 
   <div id="overlay"></div>
 
   <script src="script.js"></script>
-  <script src="whatsapp.js"></script>
+ 
 </body>
 </html>

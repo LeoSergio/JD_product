@@ -4,174 +4,65 @@ body {
   padding: 0;
 }
 
-/* Header moderno responsivo */
+/* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e2f;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e2f;
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.menu-toggle {
-  font-size: 26px;
-  background: transparent;
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: block;
-}
-
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: #2e2e3f;
-  padding: 10px 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 1px solid #444;
-}
-
-.nav-links a:last-child {
-  border-bottom: none;
-}
-
-/* Quando menu estiver aberto */
-.nav-links.ativo {
-  display: flex;
-}
-
-/* Desktop view opcional */
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-  .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    background: none;
-    gap: 20px;
-    padding: 0;
-  }
-  .nav-links a {
+.menu-toggle, .carrinho-toggle {
+    font-size: 24px;
+    background: transparent;
+    color: white;
     border: none;
-    padding: 0;
-  }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-
-
-.product {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
-  max-width: 300px;
-}
-
-.button {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.button button {
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Carrinho lateral */
-.carrinho-lateral {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 250px;
-  height: 100%;
-  background-color: #f4f4f4;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  transition: right 0.4s ease;
-  z-index: 1000;
-  overflow-y: auto;
-}
-
-.carrinho-lateral.ativo {
-  right: 0;
-}
-
-#carrinho-itens p {
-  margin: 5px 0;
-}
-
-#confirmar {
-  margin-top: 15px;
-  background-color: #ffc107;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  width: 100%;
-  cursor: pointer;
-}
-/* Botão X de fechar */
-#fechar-carrinho {
+.fechar-carrinho {
   position: absolute;
   top: 10px;
   right: 10px;
   background: transparent;
+  color: #333;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  z-index: 1;
 }
 
-/* Fundo escurecido */
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: none;
-  z-index: 999; /* abaixo do carrinho */
+.fechar-carrinho:hover {
+  color: #000;
 }
 
-/* Ativo quando carrinho está aberto */
-#overlay.ativo {
-  display: block;
+#carrinho-contador {
+    background-color: #ffc107;
+    color: #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
-
-
-/* Header fixo no topo */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e2f;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
 .menu-toggle {
   font-size: 26px;
   background: transparent;
@@ -180,81 +71,7 @@ body {
   cursor: pointer;
 }
 
-/* Menu overlay centralizado */
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(30, 30, 47, 0.95);
-  z-index: 2000;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu-overlay.ativo {
-  display: flex;
-}
-
-/* Links centralizados */
-.menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-}
-
-.menu-links a {
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.menu-links a:hover {
-  color: #ffc107;
-}
-
-/* Botão de fechar (X) */
-.menu-close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  background: transparent;
-  color: white;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e2f;
-  color: white;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.menu-toggle {
-  font-size: 26px;
-  background: transparent;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* Menu suspenso lateral (top fixo, não tela toda) */
+/* Menu suspenso lateral */
 .menu-box {
   position: fixed;
   top: 70px;
@@ -284,6 +101,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s;
 }
 
 .menu-links a:hover {
@@ -300,14 +118,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Animação opcional */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-
-/* Fundo escuro por trás do menu */
+/* Overlay do menu */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -322,4 +133,138 @@ body {
 .menu-overlay.ativo {
   display: block;
 }
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border: 1px solid red;
+}
+/* Produtos */
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  max-width: 300px;
+}
 
+/* Carrinho lateral */
+.carrinho-lateral {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.carrinho-lateral.ativo {
+  right: 0;
+}
+
+#carrinho-itens p {
+  margin: 5px 0;
+}
+
+/* Botões */
+.button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button button, #confirmar {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#confirmar {
+  margin-top: 15px;
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  width: 100%;
+}
+
+/* Overlay do carrinho */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  z-index: 999;
+}
+
+#overlay.ativo {
+  display: block;
+}
+
+/* Notificações */
+.notificacao {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  background-color: #28a745;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+.notificacao.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notificacao.erro {
+  background-color: #dc3545;
+}
+/* Estilos para os itens do carrinho */
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.remover-item {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.remover-item:hover {
+  background-color: #c82333;
+}
+
+.notificacao.aviso {
+  background-color: #ffc107;
+  color: #000;
+}
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
